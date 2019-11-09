@@ -8,11 +8,5 @@ app.use(express.static(path.join(__dirname, 'app', 'public')))
 app.use(express.json())
 app.use(express.urlencoded({  extended: true }))
 
-
-app.get('/', (req, res) => {
-  res.redirect('/home.html')
-})
-
-app.get('/survey', (req, res) => {
-  res.sendFile(path.join(__dirname, 'app', 'public', 'survey.html'))
-})
+require('./app/routing/apiRoutes')(app)
+require('./app/routing/htmlRoutes')(app)

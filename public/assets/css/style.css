@@ -23,9 +23,9 @@ form h2.subtitle {
   position: relative;
 }
 
-.friend-footer, .survey-footer{
-  background-image: linear-gradient(141deg,#159dc6 0,#3298dc 71%,#4389e5 100%);
-  box-shadow:-4px -4px 8px grey;
+.friend-footer, .survey-footer {
+  background-image: linear-gradient(141deg, #159dc6 0, #3298dc 71%, #4389e5 100%);
+  box-shadow: -4px -4px 8px grey;
   bottom: 0;
   left: 0;
   right: 0;
@@ -33,7 +33,7 @@ form h2.subtitle {
 }
 
 .hero.is-info.is-bold {
-  box-shadow:4px 4px 8px grey;
+  box-shadow: 4px 4px 8px grey;
 }
 
 .main-container {
@@ -42,7 +42,7 @@ form h2.subtitle {
 
 #survey-column {
   background-color: whitesmoke;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
   border: 1px solid #383D3B;
@@ -54,19 +54,22 @@ form h2.subtitle {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+#navbar {
+  display: flex;
+  background-color: green;
+  box-shadow: 0 8px 16px rgba(10, 10, 10, .1);
+  padding: .5rem .5rem;
+}
 
+@media screen and (max-width: 768px) {
   .footer {
     padding: 1rem;
   }
-  
   .hero-body {
     padding: 1rem 1rem;
   }
-
   .container.is-fluid {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-
 }
