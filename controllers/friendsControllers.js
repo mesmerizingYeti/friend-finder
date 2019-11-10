@@ -10,28 +10,49 @@ module.exports = {
     friends.push(friends)
   },
 
-  bestFriend (person) {
-    const comps = computeComps(person)
-    return mostCompatible(comps)
-  },
-
-  computeComps ({ scores: newScores }) {
-    return friends.map(friend => {
-      friend.scores.reduce((difference, score, index) => difference + Math.abs(score - newScores[i]))
+  async bestFriend (person) {
+    let response = await new Promise((resolve, reject) => {
+      computeCompatibilities(person)
+        .then(compatibilities => {
+          console.log(compatibilities)
+          mostCompatible(compatibilities)
+          .then(bf => {
+            resolve(bf)
+          })
+          .catch(e => reject(e))
+        })
+        .catch(e => reject(e))
     })
-  },
 
-  mostCompatible (comps) {
+    return response
+  }
+
+}
+
+async function computeCompatibilities ({ scores: newScores }) {
+  console.log(newScores)
+  let response = await new Promise((resolve, reject) => {
+    const comps = friends.map(friend => 
+      friend.scores.reduce((difference, score, index) => 
+        difference + Math.abs(score - newScores[index])))
+    resolve(comps)
+  })
+
+  return response
+}
+
+async function mostCompatible (compatibilities) {
+  let response = await new Promise((resolve, reject) => {
     let bestIndex = 0,
-        bestComp = comps[0]
-    for (let i = 1; i < comps.length; i++) {
+        bestComp = 41
+    compatibilities.forEach((comp, i) => {
       if (comp < bestComp) {
         bestComp = comp
         bestIndex = i
       }
-    }
+    })
+    resolve(friends[bestIndex])
+  })
 
-    return friends[i]
-  }
-
+  return response
 }

@@ -7,9 +7,12 @@ module.exports = function (app) {
   })
 
   app.post('/api/friends', (req, res) => {
-    const bf = bestFriend(req.body)
-    addFriend(req.body)
-    res.json(bf)
+    bestFriend(req.body)
+      .then(bf => {
+        addFriend(req.body)
+        res.json(bf)
+      })
+      .catch(e => console.log(e))
   })
 
 }
