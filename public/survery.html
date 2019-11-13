@@ -5,28 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Survey</title>
 </head>
 
 <body>
 
-  <section class="main-container">
 
-    <section class="hero is-info is-bold">
-      <div class="hero-body">
-        <div class="container is-fluid">
-          <h1 class="title"><span><i class="fas fa-poll-h"></i></span> Survey Time!</h1>
-          <h2 class="subtitle">
-            Hopefully you find someone that doesn't hate you.
-          </h2>
+    <nav class="navbar navbar-dark bg-primary flex-column flex-md-row bd-navbar">
+      <div class="navbar-brand">
+        <div>
+          <i class="fas fa-user-friends title"></i>
+          <span class="title">Friend Finder</span>
         </div>
+        <span class="subtitle">For the lonely person in all of us!</span>
       </div>
-    </section>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-light text-dark">API List</button>
+        <button type="button" class="btn btn-light text-dark">Github Repo</button>
+      </div>
+    </nav>
 
-    <div class="columns is-mobile">
+    <div class="container">
+      <div class="jumbotron">
+          <h1 class="display-4">Survey</h1>
+          <hr class="my-4">
+      </div>
+    </div>
+
+    <!-- <div class="columns is-mobile">
       <div id="survey-column" class="column is-10 is-offset-1">
         <form>
           <h2 class="subtitle"><b>About You</b></h2>
@@ -34,46 +43,50 @@
           <div class="field">
             <label class="label">Name (Required)</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="name" class="input" type="text" placeholder="Text input">
             </div>
           </div>
           <div class="field">
             <label class="label">Link to Photo Image (Required)</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="photo" class="input" type="text" placeholder="Text input">
             </div>
           </div>
           <hr class="hr">
           <p><b>Directions: </b>Answer questions from <b>1</b> (strongly disagree) to <b>5</b> (strongly agree).</p>
           <hr class="hr">
-          <!-- Question 1 -->
+
+
+
           <div class="field">
             <p><b>Question 1:</b>Your mind is always buzzing with unexplored ideas and plans.</p>
             <br>
             <div class="control">
               <label class="radio">
-                <input type="radio" name="question1">
+                <input type="radio" name="question1" value='1'>
                 1
               </label>
               <label class="radio">
-                <input type="radio" name="question1">
+                <input type="radio" name="question1" value='2'>
                 2
               </label>
               <label class="radio">
-                <input type="radio" name="question1">
+                <input type="radio" name="question1" value='3'>
                 3
               </label>
               <label class="radio">
-                <input type="radio" name="question1">
+                <input type="radio" name="question1" value='4'>
                 4
               </label>
               <label class="radio">
-                <input type="radio" name="question1">
+                <input type="radio" name="question1" value='5'>
                 5
               </label>
             </div>
           </div>
-          <!-- Question 2 -->
+
+
+
           <div class="field">
             <p><b>Question 2:</b>Generally speaking, you rely more on your experience than your imagination.</p>
             <br>
@@ -100,7 +113,9 @@
               </label>
             </div>
           </div>
-          <!-- Question 3 -->
+
+
+
           <div class="field">
             <p><b>Question 3:</b>You find it easy to stay relaxed and focused even when there is some pressure.</p>
             <br>
@@ -127,7 +142,9 @@
               </label>
             </div>
           </div>
-          <!-- Question 4 -->
+
+
+
           <div class="field">
             <p><b>Question 4:</b>You rarely do something just out of sheer curiosity.</p>
             <br>
@@ -154,7 +171,9 @@
               </label>
             </div>
           </div>
-          <!-- Question 5 -->
+
+
+
           <div class="field">
             <p><b>Question 5:</b>People can rarely upset you.</p>
             <br>
@@ -181,7 +200,9 @@
               </label>
             </div>
           </div>
-          <!-- Question 6 -->
+
+
+
           <div class="field">
             <p><b>Question 6:</b>It is often difficult for you to relate to other people’s feelings.</p>
             <br>
@@ -208,7 +229,9 @@
               </label>
             </div>
           </div>
-          <!-- Question 7 -->
+
+
+
           <div class="field">
             <p><b>Question 7:</b>In a discussion, truth should be more important than people’s sensitivities.</p>
             <br>
@@ -235,7 +258,9 @@
               </label>
             </div>
           </div>
-          <!-- Question 8 -->
+
+
+
           <div class="field">
             <p><b>Question 8:</b>You rarely get carried away by fantasies and ideas.</p>
             <br>
@@ -262,7 +287,9 @@
               </label>
             </div>
           </div>
-          <!-- Question 9 -->
+
+
+
           <div class="field">
             <p><b>Question 9:</b>You think that everyone’s views should be respected regardless of whether they are
               supported by facts or not.</p>
@@ -290,7 +317,9 @@
               </label>
             </div>
           </div>
-          <!-- Question 10 -->
+
+
+
           <div class="field">
             <p><b>Question 10:</b>You feel more energetic after spending time with a group of people.</p>
             <br>
@@ -325,29 +354,20 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> -->
 
-    <footer class="survey-footer">
-      <div class="tabs is-toggle is-toggle-rounded">
-        <ul>
-          <li>
-            <a>
-              <span class="icon is-small"><i class="far fa-list-alt"></i></span>
-              <span>API Friends List</span>
-            </a>
-          </li>
-          <li>
-            <a>
-              <span class="icon is-small"><i class="fab fa-github-square"></i></span>
-              <span>GitHub Repo</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
 
-  </section>
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="./assets/js/survey.js"></script>
 </body>
 
 </html>
