@@ -38,7 +38,7 @@
         </div>
         <div class="form-group">
           <label for="photo">Photo URL</label>
-          <input type="text" class="form-control" id="photo" placeholder="http://">
+          <input type="url" class="form-control" id="photo" placeholder="http://">
         </div>
         <p>
           <b>Question 1: </b>
@@ -180,8 +180,28 @@
         </select>
         <br>
         <br>
-        <button id="submit-btn" type="submit" class="btn btn-primary my-1">Submit</button>
+        <button id="submit-btn" type="submit" class="btn btn-primary my-1" data-toggle="modal" data-target="#bf-modal">Submit</button>
       </form>
+    </div>
+  </div>
+
+  <div id="bf-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your New Best Friend</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="bf-name"></p>
+          <img id="bf-photo" src="#" alt="bf-photo">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -195,6 +215,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./assets/js/survey.js"></script>
 </body>
 

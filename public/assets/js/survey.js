@@ -3,7 +3,7 @@ document.addEventListener('click', e => {
 
   if (e.target.id === 'submit-btn') {
     const name = document.querySelector('#name')
-    const photo = document.querySelector('#photo')
+    const photoURL = document.querySelector('#photo')
     const questions = [
       document.querySelector('#question1'),
       document.querySelector('#question2'),
@@ -16,6 +16,19 @@ document.addEventListener('click', e => {
       document.querySelector('#question9'),
       document.querySelector('#question10'),
     ]
-    console.log(questions)
+    if (questions.every(question => question.value !== 'Choose...') && name.value && photoURL.value) {
+      const newFriend = {
+        name: name.value,
+        photo: photoURL.value,
+        scores: questions.map(question => question.value)
+      }
+
+      axios.post('/api/friends', newFriend)
+        .then(({ data: { name, photo } }) => {
+          document.querySelector('#bf-name').innerHTML = name
+          document.querySelector('#bf-photo').setAttribute('src', photo)
+        })
+        .catch(e => console.error(e))
+    }
   }
 })

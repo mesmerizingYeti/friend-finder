@@ -7,14 +7,13 @@ module.exports = {
   },
 
   addFriend (person) {
-    friends.push(friends)
+    friends.push(person)
   },
 
   async bestFriend (person) {
     let response = await new Promise((resolve, reject) => {
       computeCompatibilities(person)
         .then(compatibilities => {
-          console.log(compatibilities)
           mostCompatible(compatibilities)
           .then(bf => {
             resolve(bf)
@@ -30,7 +29,6 @@ module.exports = {
 }
 
 async function computeCompatibilities ({ scores: newScores }) {
-  console.log(newScores)
   let response = await new Promise((resolve, reject) => {
     const comps = friends.map(friend => 
       friend.scores.reduce((difference, score, index) => 
