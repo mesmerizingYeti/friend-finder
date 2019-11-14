@@ -1,9 +1,9 @@
 document.addEventListener('click', e => {
-  e.preventDefault()
-
+  
   if (e.target.id === 'submit-btn') {
-    const name = document.querySelector('#name')
-    const photoURL = document.querySelector('#photo')
+    e.preventDefault()
+    const nameInput = document.querySelector('#name')
+    const photoInput = document.querySelector('#photo')
     const questions = [
       document.querySelector('#question1'),
       document.querySelector('#question2'),
@@ -16,17 +16,23 @@ document.addEventListener('click', e => {
       document.querySelector('#question9'),
       document.querySelector('#question10'),
     ]
-    if (questions.every(question => question.value !== 'Choose...') && name.value && photoURL.value) {
+    if (questions.every(question => question.value !== 'Choose...') && nameInput.value && photoInput.value) {
       const newFriend = {
-        name: name.value,
-        photo: photoURL.value,
-        scores: questions.map(question => question.value)
+        name: nameInput.value,
+        photo: photoInput.value,
+        scores: questions.map(question => parseInt(question.value))
       }
 
       axios.post('/api/friends', newFriend)
         .then(({ data: { name, photo } }) => {
           document.querySelector('#bf-name').innerHTML = name
           document.querySelector('#bf-photo').setAttribute('src', photo)
+
+          nameInput.value = ''
+          photoInput.value = ''
+          questions.forEach(question => {
+            question.value = 'Choose...'
+          })
         })
         .catch(e => console.error(e))
     }

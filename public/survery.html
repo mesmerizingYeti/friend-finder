@@ -14,16 +14,18 @@
 <body>
 
   <nav class="navbar navbar-dark bg-primary flex-column flex-md-row bd-navbar">
-    <div class="navbar-brand">
-      <div>
-        <i class="fas fa-user-friends title"></i>
-        <span class="title">Friend Finder</span>
-      </div>
-      <span class="subtitle">For the lonely person in all of us!</span>
-    </div>
+      <a class="navbar-brand" href="/">
+        <div>
+          <i class="fas fa-user-friends title"></i>
+          <span class="title">Friend Finder</span>
+        </div>
+        <span class="subtitle">For the lonely person in all of us!</span>
+      </a>
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-light text-dark">API List</button>
-      <button type="button" class="btn btn-light text-dark">Github Repo</button>
+      <button id="api" type="button" class="btn btn-light text-dark">API List</button>
+      <button type="button" class="btn btn-light text-dark">
+        <a href="https://github.com/mesmerizingYeti/friend-finder">Github Repo</a>
+      </button>
     </div>
   </nav>
 
@@ -180,7 +182,8 @@
         </select>
         <br>
         <br>
-        <button id="submit-btn" type="submit" class="btn btn-primary my-1" data-toggle="modal" data-target="#bf-modal">Submit</button>
+        <button id="submit-btn" type="submit" class="btn btn-primary my-1" data-toggle="modal"
+          data-target="#bf-modal">Submit</button>
       </form>
     </div>
   </div>
@@ -216,6 +219,7 @@
     crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/app.js"></script>
   <script src="./assets/js/survey.js"></script>
 </body>
 

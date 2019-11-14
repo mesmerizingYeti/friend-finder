@@ -11,6 +11,22 @@ form h2.subtitle {
   font-size: x-large;
 }
 
+a.navbar-brand:link, a.navbar-brand:visited, 
+a.navbar-brand:link:active, a.navbar-brand:visited:active {
+  color: white;
+}
+
+button a:link, button a:visited,
+button a:link:active, button a:visited:active {
+  color: black;
+}
+
+a.navbar-brand:link, a.navbar-brand:visited,
+button a:link, button a:visited {
+  text-decoration: initial;
+  cursor: pointer;
+}
+
 .columns {
   padding-top: 5vh;
 }
