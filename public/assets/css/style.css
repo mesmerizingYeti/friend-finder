@@ -31,6 +31,14 @@ form h2.subtitle {
   font-size: 0.9rem;
 }
 
+.custom-select {
+  width: 30%;
+}
+
+.navbar {
+  padding: 0.5rem 1.5rem;
+}
+
 #survey-column {
   background-color: whitesmoke;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
@@ -42,14 +50,7 @@ form h2.subtitle {
 }
 
 #submit-btn {
-  width: 100%;
-}
-
-#navbar {
-  display: flex;
-  background-color: green;
-  box-shadow: 0 8px 16px rgba(10, 10, 10, .1);
-  padding: .5rem .5rem;
+  width: 30%;
 }
 
 @media screen and (max-width: 768px) {
@@ -63,10 +64,34 @@ form h2.subtitle {
   }
 }
 
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
 
   .jumbotron {
     padding: 3rem 2rem;
+  }
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+  .custom-select {
+    width: 50%;
+  }
+
+  #submit-btn {
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .custom-select {
+    width: 100%;
+  }
+
+  #submit-btn {
+    width: 100%;
   }
 
 }

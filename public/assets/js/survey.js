@@ -5,20 +5,17 @@ document.addEventListener('click', e => {
     const name = document.querySelector('#name')
     const photo = document.querySelector('#photo')
     const questions = [
-      document.querySelector('input[name="question1"]:checked'),
-      document.querySelector('input[name="question2"]:checked'),
-      document.querySelector('input[name="question3"]:checked'),
-      document.querySelector('input[name="question4"]:checked'),
-      document.querySelector('input[name="question5"]:checked'),
-      document.querySelector('input[name="question6"]:checked'),
-      document.querySelector('input[name="question7"]:checked'),
-      document.querySelector('input[name="question8"]:checked'),
-      document.querySelector('input[name="question9"]:checked'),
-      document.querySelector('input[name="question10"]:checked')
+      document.querySelector('#question1'),
+      document.querySelector('#question2'),
+      document.querySelector('#question3'),
+      document.querySelector('#question4'),
+      document.querySelector('#question5'),
+      document.querySelector('#question6'),
+      document.querySelector('#question7'),
+      document.querySelector('#question8'),
+      document.querySelector('#question9'),
+      document.querySelector('#question10'),
     ]
-    if (questions.every(quest => quest) && name.value && photo.value) {
-      console.log('Ready to work!')
-    }
-    console.log(value)
+    console.log(questions)
   }
 })

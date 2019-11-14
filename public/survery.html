@@ -13,349 +13,177 @@
 
 <body>
 
-
-    <nav class="navbar navbar-dark bg-primary flex-column flex-md-row bd-navbar">
-      <div class="navbar-brand">
-        <div>
-          <i class="fas fa-user-friends title"></i>
-          <span class="title">Friend Finder</span>
-        </div>
-        <span class="subtitle">For the lonely person in all of us!</span>
+  <nav class="navbar navbar-dark bg-primary flex-column flex-md-row bd-navbar">
+    <div class="navbar-brand">
+      <div>
+        <i class="fas fa-user-friends title"></i>
+        <span class="title">Friend Finder</span>
       </div>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-light text-dark">API List</button>
-        <button type="button" class="btn btn-light text-dark">Github Repo</button>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="jumbotron">
-          <h1 class="display-4">Survey</h1>
-          <hr class="my-4">
-      </div>
+      <span class="subtitle">For the lonely person in all of us!</span>
     </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-light text-dark">API List</button>
+      <button type="button" class="btn btn-light text-dark">Github Repo</button>
+    </div>
+  </nav>
 
-    <!-- <div class="columns is-mobile">
-      <div id="survey-column" class="column is-10 is-offset-1">
-        <form>
-          <h2 class="subtitle"><b>About You</b></h2>
-          <hr class="hr">
-          <div class="field">
-            <label class="label">Name (Required)</label>
-            <div class="control">
-              <input id="name" class="input" type="text" placeholder="Text input">
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Link to Photo Image (Required)</label>
-            <div class="control">
-              <input id="photo" class="input" type="text" placeholder="Text input">
-            </div>
-          </div>
-          <hr class="hr">
-          <p><b>Directions: </b>Answer questions from <b>1</b> (strongly disagree) to <b>5</b> (strongly agree).</p>
-          <hr class="hr">
-
-
-
-          <div class="field">
-            <p><b>Question 1:</b>Your mind is always buzzing with unexplored ideas and plans.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question1" value='1'>
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question1" value='2'>
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question1" value='3'>
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question1" value='4'>
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question1" value='5'>
-                5
-              </label>
-            </div>
-          </div>
-
-
-
-          <div class="field">
-            <p><b>Question 2:</b>Generally speaking, you rely more on your experience than your imagination.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question2">
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question2">
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question2">
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question2">
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question2">
-                5
-              </label>
-            </div>
-          </div>
-
-
-
-          <div class="field">
-            <p><b>Question 3:</b>You find it easy to stay relaxed and focused even when there is some pressure.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question3">
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question3">
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question3">
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question3">
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question3">
-                5
-              </label>
-            </div>
-          </div>
-
-
-
-          <div class="field">
-            <p><b>Question 4:</b>You rarely do something just out of sheer curiosity.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question4">
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question4">
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question4">
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question4">
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question4">
-                5
-              </label>
-            </div>
-          </div>
-
-
-
-          <div class="field">
-            <p><b>Question 5:</b>People can rarely upset you.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question5">
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question5">
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question5">
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question5">
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question5">
-                5
-              </label>
-            </div>
-          </div>
-
-
-
-          <div class="field">
-            <p><b>Question 6:</b>It is often difficult for you to relate to other people’s feelings.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question6">
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question6">
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question6">
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question6">
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question6">
-                5
-              </label>
-            </div>
-          </div>
-
-
-
-          <div class="field">
-            <p><b>Question 7:</b>In a discussion, truth should be more important than people’s sensitivities.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question7">
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question7">
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question7">
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question7">
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question7">
-                5
-              </label>
-            </div>
-          </div>
-
-
-
-          <div class="field">
-            <p><b>Question 8:</b>You rarely get carried away by fantasies and ideas.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question8">
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question8">
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question8">
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question8">
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question8">
-                5
-              </label>
-            </div>
-          </div>
-
-
-
-          <div class="field">
-            <p><b>Question 9:</b>You think that everyone’s views should be respected regardless of whether they are
-              supported by facts or not.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question9">
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question9">
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question9">
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question9">
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question9">
-                5
-              </label>
-            </div>
-          </div>
-
-
-
-          <div class="field">
-            <p><b>Question 10:</b>You feel more energetic after spending time with a group of people.</p>
-            <br>
-            <div class="control">
-              <label class="radio">
-                <input type="radio" name="question10">
-                1
-              </label>
-              <label class="radio">
-                <input type="radio" name="question10">
-                2
-              </label>
-              <label class="radio">
-                <input type="radio" name="question10">
-                3
-              </label>
-              <label class="radio">
-                <input type="radio" name="question10">
-                4
-              </label>
-              <label class="radio">
-                <input type="radio" name="question10">
-                5
-              </label>
-            </div>
-          </div>
-          <br>
-          <div class="field">
-            <div class="control">
-              <button id="submit-btn" class="button is-info">Submit</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div> -->
-
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Survey</h1>
+      <hr class="my-4">
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="photo">Photo URL</label>
+          <input type="text" class="form-control" id="photo" placeholder="http://">
+        </div>
+        <p>
+          <b>Question 1: </b>
+          Your mind is always buzzing with unexplored ideas and plans.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question1">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <b>Question 2:</b>
+          Generally speaking, you rely more on your experience than your imagination.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question2">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <b>Question 3:</b>
+          You find it easy to stay relaxed and focused even when there is some pressure.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question3">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <b>Question 4:</b>
+          You rarely do something just out of sheer curiosity.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question4">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <b>Question 5:</b>
+          People can rarely upset you.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question5">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <b>Question 6:</b>
+          It is often difficult for you to relate to other people’s feelings.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question6">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <b>Question 7:</b>
+          In a discussion, truth should be more important than people’s sensitivities.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question7">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <b>Question 8:</b>
+          You rarely get carried away by fantasies and ideas.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question8">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <b>Question 9:</b>
+          You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question9">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <p>
+          <b>Question 10:</b>
+          You feel more energetic after spending time with a group of people.
+        </p>
+        <select class="custom-select my-1 mr-sm-2" id="question10">
+          <option selected>Choose...</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br>
+        <br>
+        <button id="submit-btn" type="submit" class="btn btn-primary my-1">Submit</button>
+      </form>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
