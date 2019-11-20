@@ -1,4 +1,4 @@
-let friends = [
+module.exports = [
   {
     name: 'Bruce Willis',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/c/c4/Bruce_Willis_by_Gage_Skidmore_3.jpg',
@@ -37,5 +37,3 @@ let friends = [
     scores: [ 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 ]
   }
 ]
-
-module.exports = friends
